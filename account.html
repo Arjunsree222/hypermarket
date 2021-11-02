@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>All products - online hypermarket</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="https://fonts.googleap.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" >
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="navbar">
+            <div class="logo">
+                <a href="index.html"> <img src="images/logo.png" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">products</a></li>
+                    <li><a href="">about</a></li>
+                    <li><a href="">contact</a></li>
+                    <li><a href="account.html">account</a></li>
+                
+                </ul>
+            </nav>
+            <img src="images/cart.png" width="30px" height="30px">
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        
+        </div>
+        
+        
+        
+        
+        <!-------account details------>
+        
+        <div class="account-page">
+            <div class="container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/image1.png" width="100%">
+                    </div>
+                    <div class="col-2">
+                        <div class="form-container">
+                            <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="Indicator">
+                            </div>
+                        <form action="login.php" method="post" id="LoginForm">
+                            <input type="text" placeholder="E-mail" name="email">
+                            <input type="password" placeholder="Password" name="password">
+                            <button type="submit" class="btn">Log in</button>
+                            <a href="">Forget password</a>
+                        
+                        </form>
+                        <form action="connect.php" method="post" id="RegForm">
+                            <input type="text" placeholder="First name" name="firstName">
+                            <input type="text" placeholder="Last name" name="lastName">
+                            <input type="text" placeholder="gender" name="gender">
+                            <input type="email" placeholder="email" name="email">
+                            
+                            <input type="password" placeholder="Password" name="password">
+                            <input type="number" placeholder="number" name="number">
+                            <input type="submit" class="btn" value="Register" />
+                        
+                        </form>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <!-------footer------>
+        <div class="footer">
+        <div class="container">
+            <div class="row">
+            <div class="footer-col-1">
+                <h3>Download aur app</h3>
+                <p>Download app for android.</p>
+                <div class="app-logo">
+                <img src="images/play-store.png">
+                </div>
+                </div>
+                <div class="footer-col-2">
+                <img src="images/logo-white.png">
+                <p>make a happy shopping</p>
+                </div>
+                <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupon</li>
+                        <li>Blog Post</li>
+                        <li>Return policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                <h3>Follow us</h3>
+                    <ul>
+                        <li>Factebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Youtube</li>
+                    </ul>
+                </div>
+                
+            
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021 - AKNM GPTC</p>
+            </div>
+        
+        </div>
+        <!-------js for toggle menu------>
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+            
+            MenuItems.style.maxHeight = "0px";
+            
+            function menutoggle(){
+                if(MenuItems.style.maxHeight == "0px")
+                    {
+                        MenuItems.style.maxHeight = "200px";
+                    }
+                else
+                    {
+                        MenuItems.style.maxHeight = "0px";
+                    }
+            }
+        </script>
+        
+        
+        <!-------js for toggle form------>
+        <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+        
+            function register(){
+                RegForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                Indicator.style.transform = "translateX(100px)";
+            }
+            function login(){
+                RegForm.style.transform = "translateX(300px)";
+                LoginForm.style.transform = "translateX(300px)";
+                Indicator.style.transform = "translateX(0px)";
+            }
+        </script>
+        
+    </body>
+</html>
